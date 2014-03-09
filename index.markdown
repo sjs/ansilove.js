@@ -1,18 +1,6 @@
 ---
-layout: default
+layout: home
 ---
-
-<div id="example" class="center">
-    
-</div>
-<script type="text/javascript">
-var controller;
-
-controller = AnsiLove.animate("ans/example_usage.ans", function (canvas, sauce) {
-    document.getElementById("example").appendChild(canvas);
-    controller.play(2800);
-}, {"bits": "9", "2x": (window.devicePixelRatio > 1) ? 1 : 0});
-</script>
 
 ## Description
 

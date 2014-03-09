@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>AnsiLove.js - Textmode-Art For Your Browser</title>
+    <script src="ansilove.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+    <body>
+        <div id="header" class="center" onclick="document.location = './'"></div>
+
+        <div id="example" class="center">
+
+        </div>
+
+<script type="text/javascript">
+var controller;
+
+AnsiLove.render("ans/cl!-al02.ans", function (canvas, sauce) {
+    document.getElementById("header").appendChild(canvas);
+}, {"bits": "9", "2x": (window.devicePixelRatio > 1) ? 1 : 0});
+
+controller = AnsiLove.animate("ans/example_usage.ans", function (canvas, sauce) {
+    document.getElementById("example").appendChild(canvas);
+    controller.play(2800);
+}, {"bits": "9", "2x": (window.devicePixelRatio > 1) ? 1 : 0});
+</script>
+
+        <div class="links">
+             <a href="try/">Try</a> &bull; <a href="ansitube/">AnsiTube</a> &bull; <a href="https://github.com/andyherbert/ansilove.js/archive/master.zip">Download Source</a> &bull; <a href="https://github.com/andyherbert/ansilove.js/tree/master">Visit on Github</a> &bull; <a href="examples.html">Examples</a>
+        </div>
+
+        <div id="readme">
+            {{ content }}
+        </div>
+    </body>
+</html>
