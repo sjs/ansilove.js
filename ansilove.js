@@ -144,7 +144,7 @@ var AnsiLove = (function () {
             this.sauce.comments = [];
             commentCount = this.get(); // unsigned 8-bit
             this.sauce.flags = this.get(); // unsigned 8-bit
-            this.sauce.tInfoS = this.getSZ(22); // String, maximum of 22 characters
+            this.sauce.tInfoS = this.getS(22); // String, maximum of 22 characters
             if (commentCount > 0) {
                 // If we have a value for the comments amount, seek to the position we'd expect to find them...
                 pos = bytes.length - 128 - (commentCount * 64) - 5;
